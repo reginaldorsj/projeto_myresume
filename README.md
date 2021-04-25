@@ -1,2 +1,3 @@
-# projeto_myresume
+# MyResume Project
+
 The solution of my virtual resume on the internet. This project can be accessed in the http://reginaldojr.somee.com

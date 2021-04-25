@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="MyResume.OR" namespace="MyResume.OR" default-lazy="false">
+	<class name="MyResume.OR.AboutInfo,MyResume.OR" table="ABOUT_INFO">
+
+		<id name="IdAboutInfo" column="ID_ABOUT_INFO" type="Int64" unsaved-value="0">
+			<generator class="sequence" >
+				<param name="sequence">GEN_ABOUT_INFO_ID</param>
+			</generator>
+		</id>
+		<property column="IDIOM" type="String" name="Idiom" not-null="true" length="2" />
+		<property column="FIRST_NAME" type="String" name="FirstName" not-null="true" length="50" />
+		<property column="LAST_NAME" type="String" name="LastName" not-null="true" length="50" />
+		<property column="HEAD_LINE" type="String" name="HeadLine" not-null="true" length="100" />
+		<property column="COUNTRY" type="String" name="Country" not-null="true" length="40" />
+		<property column="LOCATION_IN_THIS_COUNTRY" type="String" name="LocationInThisCountry" not-null="true" length="40" />
+		<property column="SUMMARY" type="String" name="Summary" length="5000" />
+		<property column="FACEBOOK_URL" type="String" name="FacebookUrl" length="100" />
+		<property column="LINKEDIN_URL" type="String" name="LinkedinUrl" length="100" />
+		<property column="GITHUB_URL" type="String" name="GithubUrl" length="100" />
+		<property column="EMAIL" type="String" name="Email" length="100" />
+		<property column="CELL_PHONE" type="String" name="CellPhone" length="19" />
+		<property column="SKILL_SUMMARY" type="String" name="SkillSummary" length="5000" />
+		<property column="CONTACT_SUMMARY" type="String" name="ContactSummary" length="5000" />
+		<property column="NAME_CONTACT_FIELD" type="String" name="NameContactField" length="60" />
+		<property column="EMAIL_CONTACT_FIELD" type="String" name="EmailContactField" length="60" />
+		<property column="PHONE_CONTACT_FIELD" type="String" name="PhoneContactField" length="60" />
+		<property column="COMMENTS_CONTACT_FIELD" type="String" name="CommentsContactField" length="60" />
+		<property column="SEND_MESSAGE_CONTACTT_BUTTON" type="String" name="SendMessageContacttButton" length="60" />
+		
+	</class>
+</hibernate-mapping>

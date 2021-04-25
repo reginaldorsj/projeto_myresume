@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="MyResume.OR" namespace="MyResume.OR" default-lazy="false">
+	<class name="MyResume.OR.Skill,MyResume.OR" table="SKILL">
+
+		<id name="IdSkill" column="ID_SKILL" type="Int64" unsaved-value="0">
+			<generator class="sequence" >
+				<param name="sequence">GEN_SKILL_ID</param>
+			</generator>
+		</id>
+		<many-to-one name="IdAboutInfo" column="ID_ABOUT_INFO" class="AboutInfo" not-null="true"  />
+		<property column="NAME" type="String" name="Name" not-null="true" length="60" />
+		<property column="RATE" type="Int32" name="Rate" not-null="true" />
+		<property column="ORDER_NUMBER" type="Int32" name="OrderNumber" />
+		
+	</class>
+</hibernate-mapping>

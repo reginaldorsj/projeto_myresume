@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" Inherits="MyResume.Layout" %>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+    <title>Reginaldo Júnior Personal Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display:,300, 400, 700" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+    <link rel="stylesheet" href="~/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/fonts/fontawesome/css/font-awesome.min.css">
+
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="site-wrap">
+
+            <a href="#" class="offcanvas-toggle js-offcanvas-toggle">Menu</a>
+            <div class="offcanvas_menu" id="offcanvas_menu">
+                <asp:ContentPlaceHolder ID="menu" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <ul class="social">
+                    <li>
+                        <asp:HyperLink ID="lnkFacebook" runat="server" CssClass="fa fa-facebook" Target="_blank"></asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="lnkLinkedIn" runat="server" CssClass="fa fa-linkedin" Target="_blank"></asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="lnkGithub" runat="server" CssClass="fa fa-github" Target="_blank"></asp:HyperLink></li>
+                </ul>
+
+                <br />
+                <p>
+                    <i class="fa fa-home"></i> <asp:Label ID="lblLocation" runat="server" Text=""></asp:Label><br />
+                    <i class="fa fa-phone"></i> <asp:Label ID="lblPhone" runat="server" Text=""></asp:Label><br />
+                    <i class="fa fa-envelope"></i> <a href="mailto:<%= aboutInfo.Email %>">
+                        <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label></a><br />
+                </p>
+
+                <br />
+                <p style="font-size:x-small;">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                <script type="text/javascript">document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+
+            <aside style="background-image: url(img/profile_big.jpg);"></aside>
+            <main>
+                <a href="Index.aspx" class="home-button">
+                    <asp:Label ID="lblHome" runat="server" Text="" CssClass="fa fa-home"></asp:Label></a>
+
+                <asp:ContentPlaceHolder ID="main" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </main>
+        </div>
+
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" />
+            </svg>
+        </div>
+
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/jquery-3.2.1.min.js"></script>
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/popper.min.js"></script>
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/bootstrap.min.js"></script>
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/owl.carousel.min.js"></script>
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/jquery.waypoints.min.js"></script>
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/jquery.countdown.min.js"></script>
+        <script src="<%= Request.ApplicationPath + (!Request.ApplicationPath.EndsWith("/") ? "/" : string.Empty) %>js/main.js"></script>
+    </form>
+</body>
+</html>

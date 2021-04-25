@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="MyResume.OR" namespace="MyResume.OR" default-lazy="false">
+	<class name="MyResume.OR.Caption,MyResume.OR" table="CAPTION">
+
+		<id name="IdCaption" column="ID_CAPTION" type="Int64" unsaved-value="0">
+			<generator class="sequence" >
+				<param name="sequence">GEN_CAPTION_ID</param>
+			</generator>
+		</id>
+		<many-to-one name="IdAboutInfo" column="ID_ABOUT_INFO" class="AboutInfo" not-null="true"  />
+		<property column="ABOUT" type="String" name="About" not-null="true" length="60" />
+		<property column="SKILLS" type="String" name="Skills" not-null="true" length="60" />
+		<property column="EXPERIENCE" type="String" name="Experience" not-null="true" length="60" />
+		<property column="EDUCATION" type="String" name="Education" not-null="true" length="60" />
+		<property column="CERTIFICATIONS" type="String" name="Certifications" not-null="true" length="60" />
+		<property column="LANGUAGES" type="String" name="Languages" not-null="true" length="60" />
+		<property column="CONTACT" type="String" name="Contact" not-null="true" length="60" />
+		
+	</class>
+</hibernate-mapping>

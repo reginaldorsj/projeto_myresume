@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="MyResume.OR" namespace="MyResume.OR" default-lazy="false">
+	<class name="MyResume.OR.Experience,MyResume.OR" table="EXPERIENCE">
+
+		<id name="IdExperience" column="ID_EXPERIENCE" type="Int64" unsaved-value="0">
+			<generator class="sequence" >
+				<param name="sequence">GEN_EXPERIENCE_ID</param>
+			</generator>
+		</id>
+		<many-to-one name="IdAboutInfo" column="ID_ABOUT_INFO" class="AboutInfo" not-null="true"  />
+		<property column="TITLE" type="String" name="Title" not-null="true" length="100" />
+		<property column="COMPANY" type="String" name="Company" not-null="true" length="100" />
+		<property column="LOCATION" type="String" name="Location" not-null="true" length="60" />
+		<property column="START_MONTH" type="Int32" name="StartMonth" not-null="true" />
+		<property column="START_YEAR" type="Int32" name="StartYear" not-null="true" />
+		<property column="END_MONTH" type="Int32" name="EndMonth" />
+		<property column="END_YEAR" type="Int32" name="EndYear" />
+		<property column="DESCRIPTION" type="String" name="Description" not-null="true" length="3000" />
+		
+	</class>
+</hibernate-mapping>

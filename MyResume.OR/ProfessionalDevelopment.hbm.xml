@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="MyResume.OR" namespace="MyResume.OR" default-lazy="false">
+	<class name="MyResume.OR.ProfessionalDevelopment,MyResume.OR" table="PROFESSIONAL_DEVELOPMENT">
+
+		<id name="IdProfessionalDevelopment" column="ID_PROFESSIONAL_DEVELOPMENT" type="Int64" unsaved-value="0">
+			<generator class="sequence" >
+				<param name="sequence">GEN_PROFESSIONAL_DEVELOPMENT_ID</param>
+			</generator>
+		</id>
+		<many-to-one name="IdAboutInfo" column="ID_ABOUT_INFO" class="AboutInfo" not-null="true"  />
+		<property column="NAME" type="String" name="Name" not-null="true" length="100" />
+		<property column="ISSUING_ORGANIZATION" type="String" name="IssuingOrganization" not-null="true" length="100" />
+		<property column="ISSUE_MONTH" type="Int32" name="IssueMonth" not-null="true" />
+		<property column="ISSUE_YEAR" type="Int32" name="IssueYear" not-null="true" />
+		<property column="CREDENTIAL_URL" type="String" name="CredentialUrl" length="100" />
+		
+	</class>
+</hibernate-mapping>

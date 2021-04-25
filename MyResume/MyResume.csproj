@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5961CD1-70E9-4B2A-82A3-B62E675617AA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyResume</RootNamespace>
+    <AssemblyName>MyResume</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Regisoft">
+      <HintPath>..\..\Regisoft\Regisoft\bin\Regisoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Regisoft.Web">
+      <HintPath>..\..\Regisoft\Regisoft.Web\bin\Regisoft.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\mediaelementplayer.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Certifications.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Education.aspx" />
+    <Content Include="Experience.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="img\adobe-pdf.gif" />
+    <Content Include="img\mini_brasil.png" />
+    <Content Include="img\mini_us.png" />
+    <Content Include="img\profile_big.jpg" />
+    <Content Include="Languages.aspx" />
+    <Content Include="MenuControl.ascx" />
+    <Content Include="Skills.aspx" />
+    <Content Include="Erro.aspx" />
+    <Content Include="fonts\fontawesome\css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\ionicons\cheatsheet.html" />
+    <Content Include="fonts\ionicons\css\ionicons.css" />
+    <Content Include="fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.2.1.min.js" />
+    <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.waypoints.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\mediaelement-and-player.min.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Diversos\BOAccess.cs" />
+    <Compile Include="Diversos\Email.cs" />
+    <Compile Include="Diversos\Idiom.cs" />
+    <Compile Include="Diversos\LetterOfMonth.cs" />
+    <Compile Include="Certifications.aspx.cs">
+      <DependentUpon>Certifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Certifications.aspx.designer.cs">
+      <DependentUpon>Certifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Experience.aspx.cs">
+      <DependentUpon>Experience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Experience.aspx.designer.cs">
+      <DependentUpon>Experience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Languages.aspx.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Languages.aspx.designer.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuControl.ascx.cs">
+      <DependentUpon>MenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuControl.ascx.designer.cs">
+      <DependentUpon>MenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Skills.aspx.cs">
+      <DependentUpon>Skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Skills.aspx.designer.cs">
+      <DependentUpon>Skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layout.Master" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="fonts\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="scss\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap.scss" />
+    <Content Include="scss\mixins\_alert.scss" />
+    <Content Include="scss\mixins\_background-variant.scss" />
+    <Content Include="scss\mixins\_badge.scss" />
+    <Content Include="scss\mixins\_border-radius.scss" />
+    <Content Include="scss\mixins\_box-shadow.scss" />
+    <Content Include="scss\mixins\_breakpoints.scss" />
+    <Content Include="scss\mixins\_buttons.scss" />
+    <Content Include="scss\mixins\_caret.scss" />
+    <Content Include="scss\mixins\_clearfix.scss" />
+    <Content Include="scss\mixins\_float.scss" />
+    <Content Include="scss\mixins\_forms.scss" />
+    <Content Include="scss\mixins\_gradients.scss" />
+    <Content Include="scss\mixins\_grid-framework.scss" />
+    <Content Include="scss\mixins\_grid.scss" />
+    <Content Include="scss\mixins\_hover.scss" />
+    <Content Include="scss\mixins\_image.scss" />
+    <Content Include="scss\mixins\_list-group.scss" />
+    <Content Include="scss\mixins\_lists.scss" />
+    <Content Include="scss\mixins\_nav-divider.scss" />
+    <Content Include="scss\mixins\_navbar-align.scss" />
+    <Content Include="scss\mixins\_pagination.scss" />
+    <Content Include="scss\mixins\_reset-text.scss" />
+    <Content Include="scss\mixins\_resize.scss" />
+    <Content Include="scss\mixins\_screen-reader.scss" />
+    <Content Include="scss\mixins\_size.scss" />
+    <Content Include="scss\mixins\_table-row.scss" />
+    <Content Include="scss\mixins\_text-emphasis.scss" />
+    <Content Include="scss\mixins\_text-hide.scss" />
+    <Content Include="scss\mixins\_text-truncate.scss" />
+    <Content Include="scss\mixins\_transition.scss" />
+    <Content Include="scss\mixins\_visibility.scss" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\utilities\_align.scss" />
+    <Content Include="scss\utilities\_background.scss" />
+    <Content Include="scss\utilities\_borders.scss" />
+    <Content Include="scss\utilities\_clearfix.scss" />
+    <Content Include="scss\utilities\_display.scss" />
+    <Content Include="scss\utilities\_embed.scss" />
+    <Content Include="scss\utilities\_flex.scss" />
+    <Content Include="scss\utilities\_float.scss" />
+    <Content Include="scss\utilities\_position.scss" />
+    <Content Include="scss\utilities\_screenreaders.scss" />
+    <Content Include="scss\utilities\_sizing.scss" />
+    <Content Include="scss\utilities\_spacing.scss" />
+    <Content Include="scss\utilities\_text.scss" />
+    <Content Include="scss\utilities\_visibility.scss" />
+    <Content Include="scss\_alert.scss" />
+    <Content Include="scss\_badge.scss" />
+    <Content Include="scss\_breadcrumb.scss" />
+    <Content Include="scss\_button-group.scss" />
+    <Content Include="scss\_buttons.scss" />
+    <Content Include="scss\_card.scss" />
+    <Content Include="scss\_carousel.scss" />
+    <Content Include="scss\_close.scss" />
+    <Content Include="scss\_code.scss" />
+    <Content Include="scss\_custom-forms.scss" />
+    <Content Include="scss\_custom.scss" />
+    <Content Include="scss\_dropdown.scss" />
+    <Content Include="scss\_forms.scss" />
+    <Content Include="scss\_functions.scss" />
+    <Content Include="scss\_grid.scss" />
+    <Content Include="scss\_images.scss" />
+    <Content Include="scss\_input-group.scss" />
+    <Content Include="scss\_jumbotron.scss" />
+    <Content Include="scss\_list-group.scss" />
+    <Content Include="scss\_media.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_modal.scss" />
+    <Content Include="scss\_nav.scss" />
+    <Content Include="scss\_navbar.scss" />
+    <Content Include="scss\_pagination.scss" />
+    <Content Include="scss\_popover.scss" />
+    <Content Include="scss\_print.scss" />
+    <Content Include="scss\_progress.scss" />
+    <Content Include="scss\_reboot.scss" />
+    <Content Include="scss\_root.scss" />
+    <Content Include="scss\_tables.scss" />
+    <Content Include="scss\_tooltip.scss" />
+    <Content Include="scss\_transitions.scss" />
+    <Content Include="scss\_type.scss" />
+    <Content Include="scss\_utilities.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="Downloads\Reginaldo_Rodrigues_da_Silva_Junior_CurriculoFinal.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyResume.BO\MyResume.BO.csproj">
+      <Project>{1ba9dc09-ab38-487a-b217-7035f2c9a831}</Project>
+      <Name>MyResume.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyResume.Interface\MyResume.Interface.csproj">
+      <Project>{a647ebe2-4b8b-493a-b867-c3a89c74e228}</Project>
+      <Name>MyResume.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyResume.OR\MyResume.OR.csproj">
+      <Project>{8a9a1002-6758-486e-bf7c-135212d376cc}</Project>
+      <Name>MyResume.OR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51119</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51119/MyResume</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.3</PostBuildEvent>
+  </PropertyGroup>
+</Project>

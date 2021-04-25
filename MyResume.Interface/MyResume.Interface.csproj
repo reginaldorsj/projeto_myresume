@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A647EBE2-4B8B-493A-B867-C3A89C74E228}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyResume.Interface</RootNamespace>
+    <AssemblyName>MyResume.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Regisoft">
+      <HintPath>..\..\Regisoft\Regisoft\bin\Regisoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Regisoft.Camadas.Interface">
+      <HintPath>..\..\Regisoft\Regisoft.Camadas.Interface\bin\Regisoft.Camadas.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\IAboutInfoBO.cs" />
+    <Compile Include="BO\IBOFactory.cs" />
+    <Compile Include="BO\ICaptionBO.cs" />
+    <Compile Include="BO\IEducationBO.cs" />
+    <Compile Include="BO\IExperienceBO.cs" />
+    <Compile Include="BO\ILanguageBO.cs" />
+    <Compile Include="BO\ILevelBO.cs" />
+    <Compile Include="BO\IProfessionalDevelopmentBO.cs" />
+    <Compile Include="BO\ISkillBO.cs" />
+    <Compile Include="DAO\IAboutInfoDAO.cs" />
+    <Compile Include="DAO\ICaptionDAO.cs" />
+    <Compile Include="DAO\IDAOFactory.cs" />
+    <Compile Include="DAO\IEducationDAO.cs" />
+    <Compile Include="DAO\IExperienceDAO.cs" />
+    <Compile Include="DAO\ILanguageDAO.cs" />
+    <Compile Include="DAO\ILevelDAO.cs" />
+    <Compile Include="DAO\IProfessionalDevelopmentDAO.cs" />
+    <Compile Include="DAO\ISkillDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyResume.OR\MyResume.OR.csproj">
+      <Project>{8a9a1002-6758-486e-bf7c-135212d376cc}</Project>
+      <Name>MyResume.OR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
